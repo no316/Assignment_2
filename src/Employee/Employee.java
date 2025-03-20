@@ -1,21 +1,20 @@
 package Employee;
 
 public class Employee {
-    private long employeeNumber;
+    //Attributes
+    private long employeeNum;
     private String firstName;
     private String lastName;
-    private double hoursWorked;
+    private double hours;
     private double wage;
-    private double calculatedAnnualWorkSalary;
-    private static Employee[] employees;
+    private double grossSalary;
 
-    private void internalCalculateAnnualWorkSalary() {
-        calculatedAnnualWorkSalary = hoursWorked * wage * 52;
+    //Constructor
+    public Employee(){}
 
-    }
-
-    public long getEmployeeNumber() {
-        return employeeNumber;
+    //Getters
+    public long getEmployeeNum() {
+        return employeeNum;
     }
 
     public String getFirstName() {
@@ -26,19 +25,41 @@ public class Employee {
         return lastName;
     }
 
-    public double getHoursWorked() {
-        return hoursWorked;
+    public double getHours() {
+        return hours;
     }
 
     public double getWage() {
         return wage;
     }
 
-    public double getCalculatedAnnualWorkSalary() {
-        return calculatedAnnualWorkSalary;
+    public double getGrossSalary() {
+        return grossSalary;
     }
 
-    public static Employee[] getEmployees() {
-        return employees;
+    //Setters
+    public void setEmployeeNum(long employeeNum) {
+        this.employeeNum = employeeNum;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setHours(double hours) {
+        this.hours = hours;
+    }
+
+    public void setWage(double wage) {
+        this.wage = wage;
+    }
+
+    //Calculate Gross Salary
+    public void calculateGrossSalary(){
+        this.grossSalary = this.hours * this.wage * 52;
     }
 }

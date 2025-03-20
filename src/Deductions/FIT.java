@@ -1,8 +1,6 @@
 package Deductions;
 
-import Employee.Employee;
-
-public class Federal_Income_Tax extends Deductions{
+public class FIT extends Deductions{
     private double percentage1 = 0.15;
     private double percentage2 = 0.205;
     private double percentage3 = 0.26;
@@ -15,8 +13,8 @@ public class Federal_Income_Tax extends Deductions{
     private int income4 = 177882;
     private int income5 = 253414;
     @Override
-    public double calculateTax(Employee e) {
-        double salary = e.getCalculatedAnnualWorkSalary();
+    public double calculateTax(double grossSalary) {
+        double salary = grossSalary;
         if(salary<income1)
             return 0;
         if(salary>=income1 && salary<=income2)

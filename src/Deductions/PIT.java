@@ -1,8 +1,6 @@
 package Deductions;
 
-import Employee.Employee;
-
-public class Provice_Income_Tax extends Deductions{
+public class PIT extends Deductions{
     private final double annualIncome1 = 0.14;
     private final double annualIncome2 = 0.19;
     private final double annualIncome3 = 0.24;
@@ -13,8 +11,8 @@ public class Provice_Income_Tax extends Deductions{
     private final int income4 = 129590;
 
     @Override
-    public double calculateTax(Employee e) {
-        double salary = e.getCalculatedAnnualWorkSalary();
+    public double calculateTax(double grossSalary) {
+        double salary = grossSalary;
         if(salary>income1 && salary<=income2)
             return salary*annualIncome1;
         if(salary>income2 && salary<=income3)
