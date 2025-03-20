@@ -1,5 +1,9 @@
+//------------------------------------------------------------------------------------------------------------------
+//COMP249-Winter2025-Assg2
+//Written by: Noé Menacho (40306031) & Timothy Lee Kwan Weng (40241060)
+//Implementation of Subclass PIT (Provincial Income Tax) that extends Deductions.
+//------------------------------------------------------------------------------------------------------------------
 package Deductions;
-
 public class PIT extends Deductions{
     private final double annualIncome1 = 0.14;
     private final double annualIncome2 = 0.19;

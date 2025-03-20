@@ -1,3 +1,8 @@
+//------------------------------------------------------------------------------------------------------------------
+//COMP249-Winter2025-Assg2
+//Written by: Timothy Lee Kwan Weng (40241060)
+//This class handles all file operations and formatting.
+//------------------------------------------------------------------------------------------------------------------
 import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;

@@ -1,5 +1,9 @@
+//------------------------------------------------------------------------------------------------------------------
+//COMP249-Winter2025-Assg2
+//Written by: Noé Menacho (40306031) & Timothy Lee Kwan Weng (40241060)
+//Implementation of Employee class.
+//------------------------------------------------------------------------------------------------------------------
 package Employee;
-
 public class Employee {
     //Attributes
     private long employeeNum;

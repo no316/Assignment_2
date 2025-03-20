@@ -1,5 +1,9 @@
+//------------------------------------------------------------------------------------------------------------------
+//COMP249-Winter2025-Assg2
+//Written by: Noé Menacho (40306031) & Timothy Lee Kwan Weng (40241060)
+//Implementation of Subclass FIT (Federal Income Tax) that extends Deductions.
+//------------------------------------------------------------------------------------------------------------------
 package Deductions;
-
 public class FIT extends Deductions{
     private double percentage1 = 0.15;
     private double percentage2 = 0.205;
