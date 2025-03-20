@@ -1,7 +1,3 @@
->71 lines read from file payroll
->43 lines written to error file
->Calculating deductions
->Writing report file
                                  iDroid Solutions
 ----------------------------------------------------------------------------------
 Employee   First name   Last Name    Gross salary    Deductions      Net salary   

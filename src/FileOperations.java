@@ -18,10 +18,10 @@ public class FileOperations {
     public static void writeToFile(Employee[] employees, String fn) { //will take "payrollReport.txt" as filename in Driver
         try (PrintWriter pw = new PrintWriter(new FileOutputStream(fn))) { //modern approach of trying-with-resources
             //Trivial descriptive lines
-            pw.println(">" + employees.length + " lines read from file payroll\n" +
+            System.out.println(">" + employees.length + " lines read from file\n" +
                     ">" + err_count + " lines written to error file\n" +
-                    ">Calculating deductions\n" +
-                    ">Writing report file");
+                    ">Calculating deductions...\n" +
+                    ">Writing report file...");
 
             //Header formatting for output file payrollReport.txt
             pw.printf("%49s%n", "iDroid Solutions");
@@ -85,6 +85,12 @@ public class FileOperations {
             employees = new Employee[count];
             count = 0;
 
+            //Trivial descriptive lines
+            System.out.print("""
+                    >Opening file...
+                    >Reading file...
+                    """);
+
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();
                 try (Scanner in = new Scanner(line)) {
@@ -106,7 +112,8 @@ public class FileOperations {
                      *either empty or partially filled Employee object.*/
                 } catch (InputMismatchException |
                          MinimumWageException e) { //catching either wrong input type or below minimum wage
-                    err.println(line);
+                    if (err_count == 0) System.out.println(">Error line(s) found in file"); //trivial descriptive line
+                    err.println(line); //write invalid line onto payrollError.txt
                     err_count++; //increment counter for number of lines written to payrollError.txt
                 }
             }
