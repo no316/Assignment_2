@@ -4,60 +4,62 @@
 //Implementation of Subclass PIT (Provincial Income Tax) that extends Deductions.
 //------------------------------------------------------------------------------------------------------------------
 package Deductions;
-public class PIT extends Deductions{
+
+public class PIT extends Deductions {
     //percentages
-    private final double percentage1 = 0.14;
-    private final double percentage2 = 0.19;
-    private final double percentage3 = 0.24;
-    private final double percentage4 = 0.2575;
+    private final double BRACKET1 = 0.14;
+    private final double BRACKET2 = 0.19;
+    private final double BRACKET3 = 0.24;
+    private final double BRACKET4 = 0.2575;
     //incomes
-    private final int income1 = 18571;
-    private final int income2 = 53225;
-    private final int income3 = 106495;
-    private final int income4 = 129590;
+    private final int INCOME1 = 18571;
+    private final int INCOME2 = 53225;
+    private final int INCOME3 = 106495;
+    private final int INCOME4 = 129590;
 
     /**
      * Calculates the provincial tax by breaking the gross Salary into different taxable brackets
+     *
      * @param grossSalary gross salary of the employee
      * @return returns the total deduction from the gross salary
      */
     @Override
     public double calculateTax(double grossSalary) {
-        if(grossSalary<income1){
+        if (grossSalary < INCOME1) {
             return 0;
         }
         double deduction = 0;
-        if(grossSalary>income4) {
+        if (grossSalary > INCOME4) {
             //check how much of the income is above income4
-            double temp = grossSalary - income4;
+            double temp = grossSalary - INCOME4;
             //adds to deduction the amount of deduction it got for that salary
-            deduction += temp*percentage4;
+            deduction += temp * BRACKET4;
             //set grossSalary to the rest of un-tax salary (income 4)
-            grossSalary = income4;
+            grossSalary = INCOME4;
         }
-        if(grossSalary>income3){
+        if (grossSalary > INCOME3) {
             //check how much of the income is above income3
-            double temp = grossSalary - income3;
+            double temp = grossSalary - INCOME3;
             //adds to deduction the amount of deduction it got for that salary
-            deduction += temp*percentage3;
+            deduction += temp * BRACKET3;
             //set grossSalary to the rest of un-tax salary (income 3)
-            grossSalary = income3;
+            grossSalary = INCOME3;
         }
-        if(grossSalary>income2){
+        if (grossSalary > INCOME2) {
             //check how much of the income is above income2
-            double temp = grossSalary - income2;
+            double temp = grossSalary - INCOME2;
             //adds to deduction the amount of deduction it got for that salary
-            deduction += temp*percentage2;
+            deduction += temp * BRACKET2;
             //set grossSalary to the rest of un-tax salary (income 1)
-            grossSalary = income2;
+            grossSalary = INCOME2;
         }
-        if(grossSalary>=income1){
+        if (grossSalary >= INCOME1) {
             //check how much of the income is above income1
-            double temp = grossSalary - income1;
+            double temp = grossSalary - INCOME1;
             //adds to deduction the amount of deduction it got for that salary
-            deduction += temp*percentage1;
+            deduction += temp * BRACKET1;
             //set grossSalary to the rest of un-tax salary (income 1)
-            grossSalary = income1;
+            grossSalary = INCOME1;
         }
 
         return deduction;
