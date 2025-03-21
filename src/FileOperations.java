@@ -105,7 +105,7 @@ public class FileOperations {
                         throw new MinimumWageException();
                     }
                     employees[count].setWage(wage);
-                    employees[count++].calculateGrossSalary(); //increment array index after successfully filling object
+                    employees[count++].calculateGrossSalary();//increment array index after successfully filling object
                     /*Detailed Explanation:
                      *If this above line of code is never reached, that means an exception was thrown and caught, and so
                      *the index is never incremented. This means the next line read from payroll.txt will overwrite the

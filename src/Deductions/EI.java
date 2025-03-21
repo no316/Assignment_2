@@ -5,13 +5,23 @@
 //------------------------------------------------------------------------------------------------------------------
 package Deductions;
 public class EI extends Deductions{
-    private final double premiumRate = 0.0164;
+    //for every 100$, 1.64$ will be pay
+    private final double premiumRate = 1.64;
 
+    /**
+     * Calculates the EI of a given salary
+     * @param grossSalary
+     * @return Returns the calculated amount of money, 1.64$ per 100$ or 1077.48 if salary is greater
+     * than 65700
+     */
     @Override
     public double calculateTax(double grossSalary) {
-        double salary = grossSalary;
-        if(salary <=65700)
-            return premiumRate * grossSalary;
+        //check if salary is acceptable to perform calculation or return max amount
+        if(grossSalary <=65700) {
+            //check how many 100$ there are
+            int every100Dollars = (int)(grossSalary/100);
+            return every100Dollars * premiumRate;
+        }
         return 1077.48;
     }
 }

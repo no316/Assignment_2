@@ -5,12 +5,19 @@
 //------------------------------------------------------------------------------------------------------------------
 package Deductions;
 public class QQP extends Deductions {
+    //interest
     private double interest = 0.108;
+
+    /**
+     * Calculates the QQP ffor a given gross salary
+     * @param grossSalary gross salary of the employee
+     * @return returns calculated QQP or 7700.40 if gross salary is more than 71300
+     */
     @Override
     public double calculateTax(double grossSalary) {
-        double salary = grossSalary;
-        if(salary<= 71300)
-            return salary*interest;
+        //check is the salary is smaller
+        if(grossSalary <= 71300)
+            return grossSalary *interest;
         return 7700.40;
     }
 }
