@@ -4,7 +4,6 @@
 //Implementation of Subclass QQP (Quebec Pension Plan) that extends Deductions.
 //------------------------------------------------------------------------------------------------------------------
 package Deductions;
-
 public class QQP extends Deductions {
     //interest
     private final double INTEREST = 0.108;

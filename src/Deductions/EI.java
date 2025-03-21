@@ -4,7 +4,6 @@
 //Implementation of Subclass EI (Employment Insurance) that extends Deductions.
 //------------------------------------------------------------------------------------------------------------------
 package Deductions;
-
 public class EI extends Deductions {
     //for every 100$, 1.64$ will be pay
     private final double PREMIUM = 1.64;

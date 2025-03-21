@@ -4,7 +4,6 @@
 //Implementation of Subclass QPIP (Quebec Parental Insurance Plan) that extends Deductions.
 //------------------------------------------------------------------------------------------------------------------
 package Deductions;
-
 public class QPIP extends Deductions {
     //interest for QPIP
     private final double INTEREST = 0.0494;

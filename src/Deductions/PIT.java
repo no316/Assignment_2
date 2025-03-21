@@ -4,7 +4,6 @@
 //Implementation of Subclass PIT (Provincial Income Tax) that extends Deductions.
 //------------------------------------------------------------------------------------------------------------------
 package Deductions;
-
 public class PIT extends Deductions {
     //percentages
     private final double BRACKET1 = 0.14;
